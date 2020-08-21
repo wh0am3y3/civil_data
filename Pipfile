@@ -9,6 +9,7 @@ jedi = "*"
 [packages]
 matplotlib = "*"
 pandas = "*"
+xlrd = "*"
 
 [requires]
 python_version = "3.8"
