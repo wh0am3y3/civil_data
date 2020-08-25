@@ -8,31 +8,36 @@ y_jews = [30400, 29500, 28900, 28000, 27500, 26700, 26000, 25200, 24600, 24100, 
 y_jews_and_others = [35500, 34500, 34100, 33400, 33000, 32200, 31600, 30900, 30400, 30100, 30069, 29756]
 
 plt.style.use('Solarize_Light2')
-plt.rcParams.update({'font.size': 18})
+plt.rcParams.update({'font.size': 16})
 plt.plot(x_year, y_total, 'o-')
 for x, y in zip(x_year, y_total):
     label = "{:.1f}".format(y / 1000)
     plt.annotate(label, (x, y), textcoords="offset points",
                  xytext=(0, 10), ha='center')
-plt.plot(x_year, y_jews_and_others, 'o-')
-for x, y in zip(x_year, y_jews_and_others):
-    label = "{:.1f}".format(y / 1000)
-    plt.annotate(label, (x, y), textcoords="offset points",
-                 xytext=(0, 10), ha='center')
+# plt.plot(x_year, y_jews_and_others, 'o-')
+# for x, y in zip(x_year, y_jews_and_others):
+#     label = "{:.1f}".format(y / 1000)
+#     plt.annotate(label, (x, y), textcoords="offset points",
+#                  xytext=(0, 10), ha='center')
+y_others = [j - i for j, i in zip(y_jews_and_others, y_jews)]
+y_arabs_and_others = [j + i for j, i in zip(y_arabs, y_others)]
 plt.plot(x_year, y_jews, 'o-')
 for x, y in zip(x_year, y_jews):
     label = "{:.1f}".format(y / 1000)
     plt.annotate(label, (x, y), textcoords="offset points",
                  xytext=(0, 10), ha='center')
-plt.plot(x_year, y_arabs, 'o-')
-for x, y in zip(x_year, y_arabs):
+plt.plot(x_year, y_arabs_and_others, 'o-')
+for x, y in zip(x_year, y_arabs_and_others):
     label = "{:.1f}".format(y / 1000)
     plt.annotate(label, (x, y), textcoords="offset points",
                  xytext=(0, 10), ha='center')
-plt.legend(['םיבשות ךס', 'םירחאו םידוהי', 'םידוהי', 'םיברע'],
+plt.legend(['םיבשות ךס',
+            # 'םירחאו םידוהי',
+            'םידוהי',
+            'םירחאו םיברע'],
            title='ארקמ',
            loc='center left',
-           ncol=2,
+           ncol=3,
            fancybox=True,
            shadow=True
            )
