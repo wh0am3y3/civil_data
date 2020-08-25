@@ -8,7 +8,7 @@ y_jews = [30400, 29500, 28900, 28000, 27500, 26700, 26000, 25200, 24600, 24100, 
 y_jews_and_others = [35500, 34500, 34100, 33400, 33000, 32200, 31600, 30900, 30400, 30100, 30069, 29756]
 
 plt.style.use('Solarize_Light2')
-plt.rcParams.update({'font.size': 22})
+plt.rcParams.update({'font.size': 18})
 plt.plot(x_year, y_total, 'o-')
 for x, y in zip(x_year, y_total):
     label = "{:.1f}".format(y / 1000)
@@ -37,8 +37,8 @@ plt.legend(['םיבשות ךס', 'םירחאו םידוהי', 'םידוהי', '�
            shadow=True
            )
 # plt.axvline(x=2016, linewidth=1, color='black')
-plt.xlabel('םינש')
-plt.ylabel('םיבשות')
+plt.xlabel('םינש', fontsize=18)
+plt.ylabel('םיבשות', fontsize=18)
 plt.title("(2008-2019) ס\"מלה ינותנ יפל ,לילגה ףונב םיבשות", fontsize=22)
 # plt.savefig("civil_data.png")
 plt.show()
