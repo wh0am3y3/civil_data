@@ -44,6 +44,6 @@ plt.legend(['םיבשות ךס',
 # plt.axvline(x=2016, linewidth=1, color='black')
 plt.xlabel('םינש', fontsize=18)
 plt.ylabel('םיבשות', fontsize=18)
-plt.title("(2008-2019) ס\"מלה ינותנ יפל ,לילגה ףונב םיבשות", fontsize=22)
+plt.title("(2008-2021) ס\"מלה ינותנ יפל ,לילגה ףונב םיבשות", fontsize=22)
 # plt.savefig("civil_data.png")
 plt.show()
